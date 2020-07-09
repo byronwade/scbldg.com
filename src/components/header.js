@@ -26,7 +26,9 @@ const Menu = styled.header`
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(false)
-
+  if (typeof window === 'undefined') {
+    global.window = {}
+  }
   window.onscroll = function(){
     var stop = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
     const scroll = stop >= 1 ? true : false
