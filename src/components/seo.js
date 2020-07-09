@@ -122,7 +122,7 @@ const SEO = ({ description, lang, url, meta, title }) => {
     `
   )
 
-  const metaDescription = description || websiteData.site.siteMetadata.siteDescription
+  const metaDescription = description || websiteData.site.siteDescription
 
   return (
     <Helmet
@@ -130,7 +130,7 @@ const SEO = ({ description, lang, url, meta, title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${websiteData.site.siteMetadata.siteTitle}`}
+      titleTemplate={`%s | ${websiteData.site.siteTitle}`}
       meta={[
         {
           name: `description`,
