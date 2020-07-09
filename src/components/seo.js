@@ -107,24 +107,22 @@ const SEO = ({ description, lang, url, meta, title }) => {
     ]
   }
 
-  const { site } = useStaticQuery(
+  const { websiteData } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
+        websiteData {
+          site {
             siteTitle
             siteURL
+            sitePhoneNumber
             siteDescription
-            siteSocial {
-              twitter
-            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.siteDescription
+  const metaDescription = description || websiteData.site.siteMetadata.siteDescription
 
   return (
     <Helmet
@@ -132,7 +130,7 @@ const SEO = ({ description, lang, url, meta, title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.siteTitle}`}
+      titleTemplate={`%s | ${websiteData.site.siteMetadata.siteTitle}`}
       meta={[
         {
           name: `description`,
@@ -156,7 +154,7 @@ const SEO = ({ description, lang, url, meta, title }) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.siteSocial.twitter,
+          content: 'byronwade18',
         },
         {
           name: `twitter:title`,
