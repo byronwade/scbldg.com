@@ -1,5 +1,6 @@
 //Import for code parts of react and gatsby
 import React, {useState} from "react" //react core
+import window from 'global'
 //import Img from "gatsby-image" //gatsbys image API
 import styled from "styled-components"
 
@@ -26,9 +27,7 @@ const Menu = styled.header`
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(false)
-  if (typeof window === 'undefined') {
-    global.window = {}
-  }
+
   window.onscroll = function(){
     var stop = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
     const scroll = stop >= 1 ? true : false
