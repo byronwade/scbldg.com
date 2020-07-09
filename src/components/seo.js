@@ -132,7 +132,7 @@ const SEO = ({ description, lang, url, meta, title, pageData }) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={siteTitle}
       titleTemplate={`%s | ${site.siteMetadata.siteTitle}`}
       meta={[
         {
@@ -141,7 +141,7 @@ const SEO = ({ description, lang, url, meta, title, pageData }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: siteTitle,
         },
         {
           property: `og:description`,
@@ -161,7 +161,7 @@ const SEO = ({ description, lang, url, meta, title, pageData }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: siteTitle,
         },
         {
           name: `twitter:description`,
