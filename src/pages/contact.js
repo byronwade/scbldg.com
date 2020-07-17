@@ -8,9 +8,41 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 //import Link from "../components/utils/link" //custom links
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 
-//const BackgroundImage = styled(Image)``;
+const Contact = styled.div`
+  display:flex;
+  justify-content: space-between;
+
+  .contactInfoWrapper {
+    padding:30px 20px 0 0;
+    flex: 1;
+    .green {
+      color: #18bf18;
+      font-weight: bold;
+    }
+  }
+  .formWrapper {
+    padding:30px 0;
+    flex: 1;
+    .formCard {
+      padding:50px;
+      background: #292829;
+      border-radius: 5px;
+    }
+    button {
+      color: #333;
+      background-color: #F9E192;
+      border: none;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      &:hover {
+        background-color:#ffcc23;
+      }
+    }
+  }
+`;
 
 
 const PageTemplate = ({ data }) => {
@@ -23,8 +55,72 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={contact} />
-      <h1>Website Title: {siteTitle}</h1>
-      <h1>Website Page: {contact.name}</h1>
+      <div className="container">
+        <Contact>
+          <div className="contactInfoWrapper">
+            <div>
+              <h1>READY TO REACH OUT?</h1>
+              <p>Turn your dream home into reality with Scopetonee Builders; Santa Cruz County’s most trusted design build contractor.</p>
+            </div>
+            <div>
+              <h1>CALL US</h1>
+              <p>We would love to chat with you over the phone about your upcoming project. Give us a call to get started!</p>
+              <button>831-430-6011</button>
+            </div>
+            <div>
+              <h1>HOURS OF OPERATION</h1>
+              <p><span className="green">Monday</span>: 8:00 am – 5:00 pm</p>
+              <p><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</p>
+              <p><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</p>
+              <p><span className="green">Thursday</span>: 8:00 am – 5:00 pm</p>
+              <p><span className="green">Friday</span>: 8:00 am – 5:00 pm</p>
+              <p><i>Closed Saturday and Sunday</i></p>
+            </div>
+          </div>
+          <div className="formWrapper">
+            <div className="formCard">
+              <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact" />
+
+                <Form.Group controlId="formBasicName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter your name" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPhoneNumber">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control type="number" placeholder="Enter your phone number" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+
+                <Form.Group controlId="exampleForm.Message">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control as="textarea" rows="3" />
+                </Form.Group>
+
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+
+              </Form>
+            </div>
+          </div>
+        </Contact>
+      </div>
     </Layout>
   )
 }

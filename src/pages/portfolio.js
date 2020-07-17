@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 //import Link from "../components/utils/link" //custom links
+import Container from 'react-bootstrap/Container';
 
 
 //const BackgroundImage = styled(Image)``;
@@ -23,8 +24,9 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={portfolio} />
-      <h1>Website Title: {siteTitle}</h1>
-      <h1>Website Page: {portfolio.name}</h1>
+      <Container>
+        hi
+      </Container>
     </Layout>
   )
 }

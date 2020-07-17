@@ -4,7 +4,56 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
 
-import "../scss/layout.scss" //reset styles
+//import "../scss/layout.scss" //reset styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Typography from 'typography'
+
+const typography = new Typography({
+  baseFontSize: '18px',
+  baseLineHeight: 1.45,
+  scaleRatio: 2,
+  googleFonts: [
+    {
+      name: 'Montserrat',
+      styles: [
+        '700',
+      ],
+    },
+    {
+      name: 'Merriweather',
+      styles: [
+        '400',
+        '400i',
+        '700',
+        '700i',
+      ],
+    },
+    {
+      name: 'Roboto',
+      styles: [
+        '400',
+        '400i',
+        '700',
+        '700i',
+      ],
+    },
+    {
+      name: 'Lato',
+      styles: [
+        '400',
+        '400i',
+        '700',
+        '700i',
+      ],
+    },
+  ],
+  headerFontFamily: ['Lato', 'sans-serif'],
+  headerGrayHue: 'slate',
+  //'Lato', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'
+  bodyFontFamily: ['Roboto', 'serif'],
+  includeNormalize: true,
+})
+typography.injectStyles()
 
 const theme = {
   dark: {

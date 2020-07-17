@@ -75,7 +75,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `${__dirname}/src/pages/images/gatsby-icon.png`,
+        icon: `${__dirname}/src/pages/images/scoppettone-building.png`,
       },
     },
     `gatsby-plugin-react-helmet`
