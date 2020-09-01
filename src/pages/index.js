@@ -96,7 +96,7 @@ const PageTemplate = ({ data }) => {
             Building
           </h1>
           <p className="subTitle">
-            Your trusted local general contractor. <br />
+            Your trusted local general contractor.<br />
             13 years in the making.
           </p>
           <p className="licensed">Licensed and fully insured.</p>
