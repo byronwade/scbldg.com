@@ -90,7 +90,7 @@ const PageTemplate = ({ data }) => {
         <div className="row mb-5">
           <div className="col-md-12">
             <Zoom>
-              <Link className="button" to={`/contact/`}>
+              <Link className="button" to={`/portfolio/Spa-Bathroom`}>
                 <div className="view overlay zoom">
                     <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Spa-Bathroom.png" alt="Spa Bathroom" />
                     <div className="mask flex-center">
@@ -102,7 +102,7 @@ const PageTemplate = ({ data }) => {
           </div>
           <div className="col-md-12">
             <Zoom>
-              <Link className="button" to={`/contact/`}>
+              <Link className="button" to={`/portfolio/Bathroom-Remodeling-Los-Gatos`}>
                 <div className="view overlay zoom">
                 <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Bathroom-Remodeling-Los-Gatos.png" alt="Bathroom Remodeling Los Gatos" />
                     <div className="mask flex-center">
