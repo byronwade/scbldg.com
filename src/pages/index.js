@@ -108,12 +108,12 @@ const PageTemplate = ({ data }) => {
           <Image filename="avantecture-0Vdrg5pR7NY-unsplash.png" alt={`backgroung image`} />
         </ImagePosition>
       </Hero>
-      <div className="container">
+      <Container>
         <section>
           <h1>AREAS WE SERVE</h1>
           <p>Aptos | Capitola | Felton | Live Oak | Pasatiempo | Santa Cruz |  Scotts Valley | Soquel</p>
         </section>
-      </div>
+      </Container>
     </Layout>
   )
 }

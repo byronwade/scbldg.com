@@ -38,48 +38,48 @@ const PageTemplate = ({ data }) => {
 
     <div className="row">
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-desktop"></i>
                   <h3>Responsive Design</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
               </div>
           </div>
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-code"></i>
                   <h3>Easy to Customize</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
               </div>
           </div>
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-html5"></i>
                   <h3>HTML5 &amp; CSS3</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
               </div>
           </div>
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-pencil"></i>
                   <h3>Google Fonts</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
               </div>
           </div>
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-flag-o"></i>
                   <h3>Fontawesome Icons</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
               </div>
           </div>
 
-          <div className="col-md-4 col-sm-6">
-              <div className="bg-white">
+          <div className="col-md-4 col-sm-6 pb-5">
+              <div className="text-center">
                   <i className="fa fa-globe"></i>
                   <h3>24 Support</h3>
                   <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>

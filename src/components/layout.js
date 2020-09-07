@@ -51,7 +51,7 @@ const typography = new Typography({
   headerGrayHue: 'slate',
   //'Lato', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'
   bodyFontFamily: ['Roboto', 'serif'],
-  includeNormalize: true,
+  includeNormalize: false,
 })
 typography.injectStyles()
 
