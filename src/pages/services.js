@@ -27,30 +27,66 @@ const PageTemplate = ({ data }) => {
     <Layout>
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={services} />
       <Container>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-        <Row>
-          <Col sm={3}>
-            <Nav variant="pills" className="flex-column">
-              <Nav.Item>
-                <Nav.Link eventKey="first">Residential</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second">Comercial</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={9}>
-            <Tab.Content>
-              <Tab.Pane eventKey="first">
-                hi
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                hello
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
+      <div className="row pt-5 pb-5 text-center">
+
+        <div className="col-md-12 col-sm-12">
+            <h1>What we do</h1>
+            <p>We help Brands and Businesses build communication across Web, Print and Digital Medium.</p>
+        </div>
+
+      </div>
+
+    <div className="row">
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-desktop"></i>
+                  <h3>Responsive Design</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-code"></i>
+                  <h3>Easy to Customize</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-html5"></i>
+                  <h3>HTML5 &amp; CSS3</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-pencil"></i>
+                  <h3>Google Fonts</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-flag-o"></i>
+                  <h3>Fontawesome Icons</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+              <div className="bg-white">
+                  <i className="fa fa-globe"></i>
+                  <h3>24 Support</h3>
+                  <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+              </div>
+          </div>
+
+      </div>
     </Container>
     </Layout>
   )

@@ -58,23 +58,23 @@ const PageTemplate = ({ data }) => {
       <div className="container">
         <Contact>
           <div className="contactInfoWrapper">
-            <div>
-              <h1>READY TO REACH OUT?</h1>
+            <div className="pb-5">
+              <h1>Ready to contact us?</h1>
               <p>Turn your dream home into reality with Scopetonee Builders; Santa Cruz County’s most trusted design build contractor.</p>
             </div>
-            <div>
-              <h1>CALL US</h1>
+            <div className="pb-5">
+              <h1>Or call us!</h1>
               <p>We would love to chat with you over the phone about your upcoming project. Give us a call to get started!</p>
-              <button>831-430-6011</button>
+              <button className="btn btn-primary">831-430-6011</button>
             </div>
-            <div>
-              <h1>HOURS OF OPERATION</h1>
-              <p><span className="green">Monday</span>: 8:00 am – 5:00 pm</p>
-              <p><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</p>
-              <p><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</p>
-              <p><span className="green">Thursday</span>: 8:00 am – 5:00 pm</p>
-              <p><span className="green">Friday</span>: 8:00 am – 5:00 pm</p>
-              <p><i>Closed Saturday and Sunday</i></p>
+            <div className="pb-5">
+              <h1>Our Hours</h1>
+              <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
+              <div className="pb-1"><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</div>
+              <div className="pb-1"><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</div>
+              <div className="pb-1"><span className="green">Thursday</span>: 8:00 am – 5:00 pm</div>
+              <div className="pb-1"><span className="green">Friday</span>: 8:00 am – 5:00 pm</div>
+              <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
             </div>
           </div>
           <div className="formWrapper">
