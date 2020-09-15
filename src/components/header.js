@@ -1,7 +1,7 @@
 //Import for code parts of react and gatsby
 import React, {useState} from "react" //react core
 import window from 'global'
-import Image from "./utils/imageRelativePath"; //search for existing images and display it based onf ile name
+import Image from "./utils/imageRelativePath"; //search for existing images and display it based on file name
 import styled from "styled-components"
 
 //Link import to check if internal or external link

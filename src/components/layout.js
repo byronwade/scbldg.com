@@ -4,7 +4,7 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
 
-//import "../scss/layout.scss" //reset styles
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Typography from 'typography'
 

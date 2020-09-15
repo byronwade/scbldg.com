@@ -11,7 +11,15 @@ import SEO from "../components/seo"
 import Link from "../components/utils/link" //custom links
 
 import Container from 'react-bootstrap/Container';
+import { Carousel } from 'antd';
 
+const contentStyle = {
+  height: '400px',
+  color: '#fff',
+  lineHeight: '400px',
+  textAlign: 'center',
+  background: '#364d79',
+};
 
 const ImagePosition = styled.div`
   width:100%;
@@ -80,6 +88,21 @@ const Hero = styled.div`
   }
 `;
 
+const ConentContainer = styled.div`
+.serviceArea {
+    padding: 20px;
+    background: #232323;
+    text-align: center;
+    span {
+      padding:0 15px;
+      font-weight: bold;
+    }
+  }
+  .carouselContainer {
+    margin:40px 0;
+  }
+`;
+
 const PageTemplate = ({ data }) => {
   const { site, pages } = data.websiteData //site data and page specific data
   const { siteURL, siteTitle, siteDescription } = site
@@ -101,19 +124,40 @@ const PageTemplate = ({ data }) => {
           </p>
           <p className="licensed">Licensed and fully insured.</p>
           <p>License Number: 894348</p>
-          <Link className="button" to={`/contact/`}>GET A FREE ESTIMATE</Link>
+          <Link className="button btn" to={`/contact/`}>GET A FREE ESTIMATE</Link>
         </div>
         <Opacity />
         <ImagePosition>
           <Image filename="avantecture-0Vdrg5pR7NY-unsplash.png" alt={`backgroung image`} />
         </ImagePosition>
       </Hero>
-      <Container>
-        <section>
-          <h1>AREAS WE SERVE</h1>
-          <p>Aptos | Capitola | Felton | Live Oak | Pasatiempo | Santa Cruz |  Scotts Valley | Soquel</p>
+      <ConentContainer>
+        <section className="serviceArea">
+          <div><span>Aptos</span> <span>Capitola</span> <span>Felton</span> <span>Live Oak</span> <span>Pasatiempo</span> <span>Santa Cruz</span> <span>Scotts Valley</span> <span>Soquel</span></div>
         </section>
-      </Container>
+        <Container>
+          <div>
+
+          </div>
+          <section className="carouselContainer">
+            <h1>Best of Scoppettone Building</h1>
+            <Carousel autoplay>
+              <div>
+                <h3 style={contentStyle}>1</h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>2</h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>3</h3>
+              </div>
+              <div>
+                <h3 style={contentStyle}>4</h3>
+              </div>
+            </Carousel>
+          </section>
+        </Container>
+      </ConentContainer>
     </Layout>
   )
 }

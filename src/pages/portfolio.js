@@ -50,6 +50,14 @@ const Zoom = styled.div`
     justify-content: center;
     height: 100%;
 }
+.imageTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:100;
+  background: rgba(0,0,0,.5);
+  padding:30px;
+}
 
 .overlay .mask {
     opacity: 0;
@@ -88,26 +96,28 @@ const PageTemplate = ({ data }) => {
           materials</h1>
         </div>
         <div className="row mb-5">
-          <div className="col-md-12">
+          <div className="col-md-12 mb-5">
             <Zoom>
               <Link className="button" to={`/portfolio/Spa-Bathroom`}>
                 <div className="view overlay zoom">
-                    <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Spa-Bathroom.png" alt="Spa Bathroom" />
-                    <div className="mask flex-center">
-                        <h5 className="text-white font-weight-bold">Click to learn More about this Project</h5>
-                    </div>
+                  <h1 className="imageTitle text-white font-weight-bold">Spa-Bathroom</h1>
+                  <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Spa-Bathroom.png" alt="Spa Bathroom" />
+                  <div className="mask flex-center">
+                      <h5 className="text-white font-weight-bold">Click to learn More about this Project</h5>
+                  </div>
                 </div>
               </Link>
             </Zoom>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-12 mb-5">
             <Zoom>
               <Link className="button" to={`/portfolio/Bathroom-Remodeling-Los-Gatos`}>
                 <div className="view overlay zoom">
-                <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Bathroom-Remodeling-Los-Gatos.png" alt="Bathroom Remodeling Los Gatos" />
-                    <div className="mask flex-center">
-                      <h5 className="text-white font-weight-bold">Click to learn More about this Project</h5>
-                    </div>
+                  <h1 className="imageTitle text-white font-weight-bold">Spa-Bathroom</h1>
+                  <img src="https://secureservercdn.net/198.71.233.227/i4c.0b6.myftpupload.com/wp-content/uploads/2020/05/Bathroom-Remodeling-Los-Gatos.png" alt="Bathroom Remodeling Los Gatos" />
+                  <div className="mask flex-center">
+                    <h5 className="text-white font-weight-bold">Click to learn More about this Project</h5>
+                  </div>
                 </div>
               </Link>
             </Zoom>
