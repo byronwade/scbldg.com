@@ -13,35 +13,43 @@ const FooterSection = styled.footer`
   .footerWithLinksAndLogo {
     padding:30px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background:#f4f4f4;
+    color: white;
+    background:#232323;
     .logo {
       width:20%;
-      margin:0 auto;
     }
     .links {
 
+      .menuItems {
+        display: flex;
+        flex-direction: column;
+      }
     }
     .contactUs {
 
     }
   }
   .copy {
-    padding: 30px;
+    padding: 10px 30px;
     background: #171717;
     text-align: center;
     color: #f4f4f4;
+    font-size: 0.75rem
   }
 `;
 
 const Footer = () => {
 
   return (
+
     <FooterSection>
+
       <div className="footerWithLinksAndLogo">
-        <div className="logo">
-            <Image filename="scoppettone-building.png" alt={`backgroung image`}  />
+       
+       <div className="logo">
+            <Image filename="scoppettone-building.png" alt={`backgroung image`} style={{ width: '20%', height: 'auto'}}  />
         </div>
         <div className="links">
             <div className="menuItems">
@@ -63,7 +71,10 @@ const Footer = () => {
             <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
           </div>
         </div>
-      </div>
+       </div>
+
+
+      
       <div className="copy">
         © {new Date().getFullYear()}, Built by <a href="https://www.byronwade.com">Byron Wade's Web Development and Design</a>, Built with <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://www.gatsbyjs.org">React</a>
       </div>
