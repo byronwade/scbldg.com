@@ -18,7 +18,6 @@ const FooterSection = styled.footer`
     background:#f4f4f4;
     .logo {
       width:20%;
-      margin:0 auto;
     }
     .links {
 
