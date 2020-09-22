@@ -90,16 +90,25 @@ const Hero = styled.div`
 
 const ConentContainer = styled.div`
 .serviceArea {
-    padding: 20px;
+    padding: 50px;
     background: #232323;
     text-align: center;
     span {
       padding:0 15px;
       font-weight: bold;
+      font-size: 1.5rem;
     }
   }
   .carouselContainer {
     margin:40px 0;
+  
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    .carouselElement {
+      padding: 30px 0;
+    }
   }
 `;
 
@@ -141,20 +150,22 @@ const PageTemplate = ({ data }) => {
           </div>
           <section className="carouselContainer">
             <h1>Best of Scoppettone Building</h1>
-            <Carousel autoplay>
-              <div>
-                <h3 style={contentStyle}>1</h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>2</h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>3</h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>4</h3>
-              </div>
-            </Carousel>
+            <div className="carouselElement">
+              <Carousel autoplay>
+                <div>
+                  <h3 style={contentStyle}>1</h3>
+                </div>
+                <div>
+                  <h3 style={contentStyle}>2</h3>
+                </div>
+                <div>
+                  <h3 style={contentStyle}>3</h3>
+                </div>
+                <div>
+                  <h3 style={contentStyle}>4</h3>
+                </div>
+              </Carousel>
+            </div>
           </section>
         </Container>
       </ConentContainer>
