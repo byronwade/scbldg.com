@@ -1,17 +1,16 @@
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
+import { Carousel } from 'antd';
+import { graphql } from "gatsby";
+import React from "react";
+import Container from 'react-bootstrap/Container';
+import styled from "styled-components";
+//import StyledBackgroundSection from "../components/utils/imageBackground"; //search for existing images and display it based onf ile name
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 //import ReactHtmlParser from 'react-html-parser'; //parse html
 import Image from "../components/utils/imageRelativePath"; //search for existing images and display it based onf ile name
-//import StyledBackgroundSection from "../components/utils/imageBackground"; //search for existing images and display it based onf ile name
+import Link from "../components/utils/link"; //custom links
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
-import Link from "../components/utils/link" //custom links
-
-import Container from 'react-bootstrap/Container';
-import { Carousel } from 'antd';
 
 const contentStyle = {
   height: '400px',
@@ -96,12 +95,12 @@ const ConentContainer = styled.div`
     span {
       padding:0 15px;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
   .carouselContainer {
     margin:40px 0;
-  
+
     h1 {
       color: white;
       text-align: center;
