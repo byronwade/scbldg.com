@@ -13,28 +13,56 @@ const FooterSection = styled.footer`
   .footerWithLinksAndLogo {
     padding:30px;
     display:flex;
-    justify-content: space-around;
-    align-items: center;
+   
+    
     color: white;
     background:#232323;
     .logo {
-      width:20%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .image-wrapper{
+        width: 30%;  
+        margin: 0 auto;
+      }
+     
     }
     .links {
+      flex: 1;
 
       .menuItems {
+        height: 100%;
         display: flex;
         flex-direction: column;
+        .menuLink {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          
+        }
       }
     }
     .contactUs {
-
+      flex: 1;
+      position: relative;
+      text-align: center;
+      button {
+        color: white;
+        background: none;
+        border: none;
+      }
+      h1 {
+        color: white;
+      }
+      
     }
   }
   .copy {
     padding: 10px 30px;
     background: #171717;
-    text-align: center;
+    text-align: right;
     color: #f4f4f4;
     font-size: 0.75rem
   }
@@ -47,21 +75,15 @@ const Footer = () => {
     <FooterSection>
 
       <div className="footerWithLinksAndLogo">
-       
-       <div className="logo">
-            <Image filename="scoppettone-building.png" alt={`backgroung image`} style={{ width: '20%', height: 'auto'}}  />
+      <div className="logo">
+         <div className="image-wrapper">
+          <Image filename="scoppettone-building.png" alt={`backgroung image`} />
+         </div>
         </div>
-        <div className="links">
-            <div className="menuItems">
-              <Link to={`/`}>Home</Link>
-              <Link to={`/services/`}>Services</Link>
-              <Link to={`/portfolio/`}>Portfolio</Link>
-              <Link to={`/contact/`}>Contact</Link>
-            </div>
-        </div>
-        <div className="contactUs">
+     
+      <div className="contactUs">
           <button>(831 430-6011)</button>
-          <div className="pb-5">
+          <div className="pb-2">
             <h1>Our Hours</h1>
             <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
             <div className="pb-1"><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</div>
@@ -71,6 +93,16 @@ const Footer = () => {
             <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
           </div>
         </div>
+
+        <div className="links">
+            <div className="menuItems">
+              <Link to={`/`} className="menuLink">Home</Link>
+              <Link to={`/services/`} className="menuLink">Services</Link>
+              <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
+              <Link to={`/contact/`} className="menuLink">Contact</Link>
+            </div>
+        </div>
+        
        </div>
 
 
