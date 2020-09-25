@@ -30,7 +30,7 @@ const FooterSection = styled.footer`
       }
       .company-desc {
         font-size: 1rem;
-        width: 90%;
+        width: 87%;
       }
     }
     .links {
@@ -66,14 +66,33 @@ const FooterSection = styled.footer`
       .green {
         color: #18bf18;
       }
-      
+    }
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+      .logo {
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+      }
+    }
+    @media (max-width: 490px) {
+      flex-direction: column;
+      .contactUs {
+        justify-content: flex-start;
+        margin-top: 20px;
+      }
+    }
+    @media (max-width: 400px) {
+      .links {
+        flex-direction: column;
+        .menuItems:nth-child(2) {
+          margin-top: 15px;
+        }
+      }
     }
   }
   .copy {
     padding: 10px 30px;
      background: #171717;
-   // background:#232323;
-    // text-align: right;
     color: #f4f4f4;
     font-size: 0.75rem
   }
