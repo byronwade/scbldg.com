@@ -11,58 +11,69 @@ const FooterSection = styled.footer`
   width: 100%;
   color: #333;
   .footerWithLinksAndLogo {
-    padding:30px;
+    padding:40px;
     display:flex;
-   
-    
     color: white;
     background:#232323;
     .logo {
       flex: 1;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       .image-wrapper{
         width: 30%;  
-        margin: 0 auto;
+        margin-bottom: 20px; 
       }
-     
+      .company-name {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+       
+      }
+      .company-desc {
+        font-size: 1rem;
+        width: 90%;
+      }
     }
     .links {
       flex: 1;
-
+      display: flex;
       .menuItems {
-        height: 100%;
         display: flex;
         flex-direction: column;
-        .menuLink {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        flex: 1;
+        .group-title {
+          font-weight: bold;
+          font-size: 1rem;
+          margin-bottom: 5px
+        }
+        .menuLink {          
           color: white;
-          
+          padding: 5px 0 5px 0;
+          font-size: 0.75rem;
         }
       }
     }
     .contactUs {
       flex: 1;
-      position: relative;
-      text-align: center;
-      button {
-        color: white;
-        background: none;
-        border: none;
-      }
+      display: flex;
+      justify-content: center;
+      font-size: 0.75rem;
       h1 {
         color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 5px
+      }
+      .green {
+        color: #18bf18;
       }
       
     }
   }
   .copy {
     padding: 10px 30px;
-    background: #171717;
-    text-align: right;
+     background: #171717;
+   // background:#232323;
+    // text-align: right;
     color: #f4f4f4;
     font-size: 0.75rem
   }
@@ -79,10 +90,28 @@ const Footer = () => {
          <div className="image-wrapper">
           <Image filename="scoppettone-building.png" alt={`backgroung image`} />
          </div>
+         <p className="company-name">Scoppettone Building</p>
+         <p className="company-desc">General Contractor & Project Management</p>
+         
+        </div>
+        <div className="links">
+            <div className="menuItems">
+              <p className="group-title">Explore</p>
+              <Link to={`/`} className="menuLink">Home</Link>
+              <Link to={`/services/`} className="menuLink">Services</Link>
+              <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
+              <Link to={`/contact/`} className="menuLink">Contact</Link>
+            </div>
+            <div className="menuItems">
+              <p className="group-title">Projects</p>
+              <Link to={`/portfolio/Spa-Bathroom`} className="menuLink">Spa-Bathroom</Link>
+              <Link to={`/portfolio/Bathroom-Remodeling-Los-Gatos`} className="menuLink">Bathroom Remodeling</Link>
+
+            </div>
         </div>
      
       <div className="contactUs">
-          <button>(831 430-6011)</button>
+          
           <div className="pb-2">
             <h1>Our Hours</h1>
             <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
@@ -92,15 +121,6 @@ const Footer = () => {
             <div className="pb-1"><span className="green">Friday</span>: 8:00 am – 5:00 pm</div>
             <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
           </div>
-        </div>
-
-        <div className="links">
-            <div className="menuItems">
-              <Link to={`/`} className="menuLink">Home</Link>
-              <Link to={`/services/`} className="menuLink">Services</Link>
-              <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
-              <Link to={`/contact/`} className="menuLink">Contact</Link>
-            </div>
         </div>
         
        </div>
