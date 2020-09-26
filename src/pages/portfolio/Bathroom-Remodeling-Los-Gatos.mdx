@@ -1,1 +1,26 @@
-Bathroom-Remodeling-Los-Gatos
+---
+id: "Project-2"
+title: "Bathroom-Remodeling-Los-Gatos"
+date: "2019-05-04"
+featuredImage: "bathroom3.jpg"
+---
+
+import Template from "../../templates/portfolioProject";
+
+import Pic1 from "../images/Project-2/bathroom1.jpeg";
+import Pic2 from "../images/Project-2/bathroom2.jpg";
+import Pic3 from "../images/Project-2/bathroom3.jpg";
+import Pic4 from "../images/Project-2/bathroom4.jpg";
+import Pic5 from "../images/Project-2/bathroom5.jpg";
+import Pic6 from "../images/Project-2/bathroom6.jpg";
+
+export const images = [
+    Pic1,
+    Pic2,
+    Pic3,
+    Pic4,
+    Pic5,
+    Pic6
+];
+
+<Template id={props.pageContext.frontmatter.id} imageShowcase={images} />

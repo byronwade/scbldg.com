@@ -59,16 +59,16 @@ const PageTemplate = ({ data }) => {
         <Contact>
           <div className="contactInfoWrapper">
             <div className="pb-5">
-              <h1>Ready to contact us?</h1>
+              <h1 className="text-white">Ready to contact us?</h1>
               <p>Turn your dream home into reality with Scopetonee Builders; Santa Cruz County’s most trusted design build contractor.</p>
             </div>
             <div className="pb-5">
-              <h1>Or call us!</h1>
+              <h1 className="text-white">Or call us!</h1>
               <p>We would love to chat with you over the phone about your upcoming project. Give us a call to get started!</p>
               <button className="btn btn-primary">831-430-6011</button>
             </div>
             <div className="pb-5">
-              <h1>Our Hours</h1>
+              <h1 className="text-white">Our Hours</h1>
               <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
               <div className="pb-1"><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</div>
               <div className="pb-1"><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</div>

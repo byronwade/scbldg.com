@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 //import ReactHtmlParser from 'react-html-parser'; //parse html
@@ -9,51 +9,74 @@ import Layout from "../components/layout"
 import Link from "../components/utils/link" //custom links
 
 import Container from 'react-bootstrap/Container';
+import Lightbox from "react-image-lightbox";
+import 'react-image-lightbox/style.css';
 
 const ProjectContainer = styled.div`
-    h1 {
-        color: green;
+    margin-bottom: 3rem;
+    .title {
+        font-size: 3rem;
+        font-weight: 200;
+    }
+    .date {
+        font-size: 1.25rem;
+        font-weight: 100;
+    }
+    .ImageWrapper {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .project-showcase-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 
-const PortfolioProject = ({ title, date, description, featuredImage }) => (
-        <Layout>
-      <Container>
-      <ProjectContainer>
-        <div className="blog-post">
-          <h1>{title}</h1>
-          <h2>{date}</h2>
-          <Image filename={featuredImage} alt={'backgroung image'}/>
-          <p>{description}</p>
-          {/* <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          /> */}
-        </div>
-      </ProjectContainer>
-      </Container>
-    </Layout>
-)
+const PortfolioProject = ({ title, date, featuredImage, imageShowcase }) => {
+    const [images, setImages] = useState(imageShowcase)
+    const [currentImageIndex, setCurrentImageIndex] = useState(null)
+
+    return (
+            <Layout>
+        <Container>
+        <ProjectContainer>
+            <div className="my-3">
+            <h1 className="text-white mt-3 mb-0 title">{title}</h1>
+            <h2 className="text-white mb-3 date">{date}</h2>
+            <div className="my-3"><Image filename={featuredImage} alt={'backgroung image'} /></div>
+            </div>
+            <div className="row">
+                {
+                    images.map((currentImage, index) => 
+                        <div key={index} className="col-md-4 my-3 ">
+                            <div className="ImageWrapper">
+                                <img src={currentImage} alt={'showcase-image'} className="project-showcase-img" onClick={() => setCurrentImageIndex(index)}/>
+                            </div>
+                        </div>
+                    )
+                }
+            </div>
+            
+            { images !== undefined && typeof(currentImageIndex) === 'number' &&
+                <Lightbox
+                    mainSrc={images[currentImageIndex]}
+                    onCloseRequest={() => setCurrentImageIndex(null)}
+                />
+            }
+        </ProjectContainer>
+        </Container>
+        </Layout>
+    )
+}
 
 export default function Template(props) {
-  //const { markdownRemark } = data // data.markdownRemark holds your post data
-  //const { frontmatter, html } = markdownRemark
-//   return (
-//     <Layout>
-//       <Container>
-//       <div className="blog-post-container">
-//         <div className="blog-post">
-//           <h1>{frontmatter.title}</h1>
-//           <h2>{frontmatter.date}</h2>
-//           {/* <div
-//             className="blog-post-content"
-//             dangerouslySetInnerHTML={{ __html: html }}
-//           /> */}
-//         </div>
-//       </div>
-//       </Container>
-//     </Layout>
-//   )
 return (
     <StaticQuery
         query={
@@ -63,9 +86,9 @@ return (
                         edges {
                             node {
                                 frontmatter {
+                                    id
                                     title
                                     date(formatString: "MMMM DD, YYYY")
-                                    description
                                     featuredImage
                                 }
                             }
@@ -75,31 +98,11 @@ return (
             `
         }
         render={data => {
-            const searchTitle = props.title
-            console.log(data)
-            //console.log(data);
+            const searchId = props.id
             const projectsList = data.allMdx.edges
-            //console.log(projectsList[0].node)
-            const project = projectsList.find(currentProject => currentProject.node.frontmatter.title === searchTitle)
-            //console.log(project.node.frontmatter)
-            return <PortfolioProject {...project.node.frontmatter} />
-
-            //return <p>Hi</p>
+            const project = projectsList.find(currentProject => currentProject.node.frontmatter.id === searchId)
+            return <PortfolioProject {...project.node.frontmatter} imageShowcase={props.imageShowcase} />
         }}
     />
 )
 }
-
-
-// export const pageQuery = graphql`
-//   query($slug: String!) {
-//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         slug
-//         title
-//       }
-//     }
-//   }
-// `

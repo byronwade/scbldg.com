@@ -90,7 +90,7 @@ const PageTemplate = ({ data }) => {
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={portfolio} />
       <Container>
         <div className="pt-5 pb-5">
-          <h1>See our projects <br />
+          <h1 className="text-white">See our projects <br />
           We strive to provide <br />
           the highest quality <br />
           materials</h1>

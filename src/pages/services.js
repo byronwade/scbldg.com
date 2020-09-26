@@ -19,11 +19,6 @@ import Nav from 'react-bootstrap/Nav';
 
 import Image from "../components/utils/imageRelativePath"; //search for existing images and display it based onf ile name
 
-const ServicePageWrapper = styled.div`
-  .PageTitle, .ServiceColTitle, .estimatePrompt {
-    color: white;
-  }
-`;
 
 const SizedServiceImg = styled.div`
   max-width: 100px;
@@ -48,11 +43,10 @@ const PageTemplate = ({ data }) => {
     <Layout>
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={services} />
       <Container>
-        <ServicePageWrapper>
           <div className="row pt-5 pb-5 text-center">
 
   <div className="col-md-12 col-sm-12">
-      <h1 className="PageTitle">What we do</h1>
+      <h1 className="text-white">What we do</h1>
       <p>We help Brands and Businesses build communication across Web, Print and Digital Medium.</p>
   </div>
 
@@ -66,7 +60,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="pipeline.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Plumbing</h3>
+            <h3 className="text-white">Plumbing</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -77,7 +71,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="drywall.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Drywall/Rot Damage</h3>
+            <h3 className="text-white">Drywall/Rot Damage</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -88,7 +82,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="decksicon.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Decks</h3>
+            <h3 className="text-white">Decks</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -99,7 +93,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="electricWire.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Electrical</h3>
+            <h3 className="text-white">Electrical</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -110,7 +104,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="foundation.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Foundation Work</h3>
+            <h3 className="text-white">Foundation Work</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -121,7 +115,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="window.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Window and Door Replacements</h3>
+            <h3 className="text-white">Window and Door Replacements</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -132,7 +126,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="plan.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Plans and Permits</h3>
+            <h3 className="text-white">Plans and Permits</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -143,7 +137,7 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="fence.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Fences and Retaining Walls</h3>
+            <h3 className="text-white">Fences and Retaining Walls</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
@@ -154,17 +148,16 @@ const PageTemplate = ({ data }) => {
             <SizedServiceImg>
               <Image filename="remodel.png" alt={`backgroung image`}  />
             </SizedServiceImg>
-            <h3 className="ServiceColTitle">Remodels and Additions</h3>
+            <h3 className="text-white">Remodels and Additions</h3>
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-      <Link className="btn primary estimatePrompt" to={`/contact/`}>GET A FREE ESTIMATE</Link>
+      <Link className="btn primary text-white" to={`/contact/`}>GET A FREE ESTIMATE</Link>
     </div>
 
   </div>
-        </ServicePageWrapper>
     </Container>
     </Layout>
   )

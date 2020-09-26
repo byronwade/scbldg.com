@@ -1,12 +1,26 @@
 ---
+id: "Project-1"
 title: "Spa-Bathroom"
 date: "2019-05-04"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dui dui, mattis eu risus eget, porta viverra massa. Maecenas sit amet turpis erat. Fusce eros augue, varius eget sapien non, dapibus vehicula sem. Aenean quis malesuada nibh. Proin ullamcorper tincidunt porta. Integer dictum vitae mi nec varius. Nulla accumsan dictum mi quis tincidunt. In at arcu vitae velit vestibulum accumsan. Aenean id dui eget nibh auctor sodales. Curabitur sed purus nec justo pellentesque rutrum nec non erat. Fusce cursus turpis at ex elementum, eu ornare magna luctus. Nullam eget tempus est. Suspendisse potenti. Donec convallis leo elit, venenatis ultrices lacus posuere ut. Vestibulum suscipit condimentum nulla, at pretium ex vestibulum eu.
-
-Nullam et viverra mauris. Mauris non ornare ligula, ac posuere dolor. Fusce dictum eu ex ut bibendum. Sed ac fermentum augue. Maecenas rutrum pretium turpis, at consectetur nulla fermentum sed. Phasellus vel mauris vel eros vestibulum luctus ut id ligula. Quisque sollicitudin metus nec mauris ullamcorper feugiat. Phasellus porttitor mauris ac convallis pellentesque. Nam id viverra diam."
 featuredImage: "spa-bathroom-1.png"
 ---
 
 import Template from "../../templates/portfolioProject";
 
-<Template title={props.pageContext.frontmatter.title} />
+import Spa1 from "../images/Project-1/spa-bathroom-1.png";
+import Spa2 from "../images/Project-1/spa2.jpg";
+import Spa3 from "../images/Project-1/spa3.jpg";
+import Spa4 from "../images/Project-1/spa4.jpg";
+import Spa5 from "../images/Project-1/spa5.png";
+import Spa6 from "../images/Project-1/spa6.jpg";
+
+export const images = [
+    Spa1,
+    Spa2,
+    Spa3,
+    Spa4,
+    Spa5,
+    Spa6
+];
+
+<Template id={props.pageContext.frontmatter.id} imageShowcase={images} />
