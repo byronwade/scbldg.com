@@ -20,7 +20,7 @@ import Nav from 'react-bootstrap/Nav';
 import Image from "../components/utils/imageRelativePath"; //search for existing images and display it based onf ile name
 
 const ServicePageWrapper = styled.div`
-  .PageTitle, .ServiceColTitle {
+  .PageTitle, .ServiceColTitle, .estimatePrompt {
     color: white;
   }
 `;
@@ -160,7 +160,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-      <Link className="btn primary" to={`/contact/`}>GET A FREE ESTIMATE</Link>
+      <Link className="btn primary estimatePrompt" to={`/contact/`}>GET A FREE ESTIMATE</Link>
     </div>
 
   </div>

@@ -94,7 +94,7 @@ const FooterSection = styled.footer`
     padding: 10px 30px;
      background: #171717;
     color: #f4f4f4;
-    font-size: 0.75rem
+    font-size: 0.75rem;
   }
 `;
 

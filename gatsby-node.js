@@ -56,37 +56,37 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   createNode(node)
 }
 
-exports.createPages = async({ actions, graphql, reporter }) => {
+// exports.createPages = async({ actions, graphql, reporter }) => {
 
-  const { createPage } = actions
+//   const { createPage } = actions
 
-  const portfolioProjectTemplate = require.resolve(`./src/templates/portfolioProject.js`)
+//   const portfolioProjectTemplate = require.resolve(`./src/templates/portfolioProject.js`)
 
-  const result = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+//   const result = await graphql(`
+//     {
+//       allMarkdownRemark(
+//         sort: { order: DESC, fields: [frontmatter___date] }
+//         limit: 1000
+//       ) {
+//         edges {
+//           node {
+//             frontmatter {
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: portfolioProjectTemplate,
-      context: {
-        // additional data can be passed via context
-        slug: node.frontmatter.slug,
-      },
-    })
-  })
-}
+//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//     createPage({
+//       path: node.frontmatter.slug,
+//       component: portfolioProjectTemplate,
+//       context: {
+//         // additional data can be passed via context
+//         slug: node.frontmatter.slug,
+//       },
+//     })
+//   })
+// }
