@@ -15,29 +15,44 @@ const Menu = styled.header`
   color: #fff;
   z-index: 100;
   transition: all 200ms linear;
-  .branding {
-    width: 73px;
+  padding: 10px;
+  .brandingz {
+    max-width: 73px;
   }
-  a {
-    padding:10px 10px;
-    color: #fff;
-  };
-  .contactInfo {
+  .contactInfoz {
     text-align: right;
     padding-bottom:5px;
     span {
-      padding: 0px 5px;
-      font-size:13px;
+      padding: 0px 2px;
+      font-size: 13px;
       color: #F9E192;
     }
   }
+  .menuItemz {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: right;
+    a {
+      color: #fff;
+      padding: 10px 10px;
+      font-size: 0.75rem;
+    }
+  }
+  @media(max-width: 424px) {
+    .contactInfoz {
+      span {
+        font-size: 11px;
+      }
+    }
+    .menuItemz {
+   
+      a {
+        font-size: 0.5rem;
+        padding: 8px 8px;
+      }
+    }
+  }
   background: ${props => props.scrollPosition === true ? '#333' : null};
-`;
-
-const InnerMenu = styled.div`
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
 `;
 
 const Header = () => {
@@ -52,24 +67,27 @@ const Header = () => {
   return (
     <Menu scrollPosition={scrollPosition}>
       <div className="container">
-        <InnerMenu>
-          <div className="branding">
-            <Image filename="scoppettone-building.png" alt={`backgroung image`}  />
+        <div className="row">
+          <div className="col-3">
+          <div className="brandingz">
+          <Image filename="scoppettone-building.png" alt={`backgroung image`}  />
           </div>
-          <div className="menu">
-            <div className="contactInfo">
+          </div>
+          <div className="col-9">
+            <div className="contactInfoz">
               <span>bcw1995@gmail.com</span>
               <span>|</span>
               <span>831.430.6011</span>
             </div>
-            <div className="menuItems">
+          </div>
+        </div>
+        <div className="menuItemz">
               <Link to={`/`}>Home</Link>
               <Link to={`/services/`}>Services</Link>
               <Link to={`/portfolio/`}>Portfolio</Link>
               <Link to={`/contact/`}>Contact</Link>
-            </div>
-          </div>
-        </InnerMenu>
+        </div>
+        
       </div>
     </Menu>
   )

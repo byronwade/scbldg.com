@@ -13,12 +13,9 @@ import Button from 'react-bootstrap/Button';
 
 
 const Contact = styled.div`
-  display:flex;
-  justify-content: space-between;
 
   .contactInfoWrapper {
     padding:30px 20px 0 0;
-    flex: 1;
     .green {
       color: #18bf18;
       font-weight: bold;
@@ -26,7 +23,6 @@ const Contact = styled.div`
   }
   .formWrapper {
     padding:30px 0;
-    flex: 1;
     .formCard {
       padding:50px;
       background: #292829;
@@ -57,68 +53,76 @@ const PageTemplate = ({ data }) => {
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={contact} />
       <div className="container">
         <Contact>
-          <div className="contactInfoWrapper">
-            <div className="pb-5">
-              <h1 className="text-white">Ready to contact us?</h1>
-              <p>Turn your dream home into reality with Scopetonee Builders; Santa Cruz County’s most trusted design build contractor.</p>
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
+              <div className="contactInfoWrapper">
+              <div className="pb-5">
+                <h1 className="text-white">Ready to contact us?</h1>
+                <p>Turn your dream home into reality with Scopetonee Builders; Santa Cruz County’s most trusted design build contractor.</p>
+              </div>
+              <div className="pb-5">
+                <h1 className="text-white">Or call us!</h1>
+                <p>We would love to chat with you over the phone about your upcoming project. Give us a call to get started!</p>
+                <button className="btn btn-primary">831-430-6011</button>
+              </div>
+              <div className="pb-5">
+                <h1 className="text-white">Our Hours</h1>
+                <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
+                <div className="pb-1"><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</div>
+                <div className="pb-1"><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</div>
+                <div className="pb-1"><span className="green">Thursday</span>: 8:00 am – 5:00 pm</div>
+                <div className="pb-1"><span className="green">Friday</span>: 8:00 am – 5:00 pm</div>
+                <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
+              </div>
             </div>
-            <div className="pb-5">
-              <h1 className="text-white">Or call us!</h1>
-              <p>We would love to chat with you over the phone about your upcoming project. Give us a call to get started!</p>
-              <button className="btn btn-primary">831-430-6011</button>
             </div>
-            <div className="pb-5">
-              <h1 className="text-white">Our Hours</h1>
-              <div className="pb-1"><span className="green">Monday</span>: 8:00 am – 5:00 pm</div>
-              <div className="pb-1"><span className="green">Tuesday</span>: 8:00 am – 5:00 pm</div>
-              <div className="pb-1"><span className="green">Wednesday</span>: 8:00 am – 5:00 pm</div>
-              <div className="pb-1"><span className="green">Thursday</span>: 8:00 am – 5:00 pm</div>
-              <div className="pb-1"><span className="green">Friday</span>: 8:00 am – 5:00 pm</div>
-              <div className="pb-1"><i>Closed Saturday and Sunday</i></div>
+
+            <div className="col-sm-12 col-md-6">
+            <div className="formWrapper">
+              <div className="formCard">
+                <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <input type="hidden" name="bot-field" />
+                  <input type="hidden" name="form-name" value="contact" />
+
+                  <Form.Group controlId="formBasicName">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your name" />
+                    <Form.Text className="text-muted">
+                      We'll never share your email with anyone else.
+                    </Form.Text>
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicPhoneNumber">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control type="number" placeholder="Enter your phone number" />
+                    <Form.Text className="text-muted">
+                      We'll never share your email with anyone else.
+                    </Form.Text>
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Text className="text-muted">
+                      We'll never share your email with anyone else.
+                    </Form.Text>
+                  </Form.Group>
+
+                  <Form.Group controlId="exampleForm.Message">
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control as="textarea" rows="3" />
+                  </Form.Group>
+
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+
+                </Form>
+              </div>
             </div>
           </div>
-          <div className="formWrapper">
-            <div className="formCard">
-              <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
-
-                <Form.Group controlId="formBasicName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter your name" />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
-
-                <Form.Group controlId="formBasicPhoneNumber">
-                  <Form.Label>Phone Number</Form.Label>
-                  <Form.Control type="number" placeholder="Enter your phone number" />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
-
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
-
-                <Form.Group controlId="exampleForm.Message">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows="3" />
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
-                  Submit
-                </Button>
-
-              </Form>
-            </div>
           </div>
+          
         </Contact>
       </div>
     </Layout>

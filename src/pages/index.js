@@ -9,6 +9,7 @@ import SEO from "../components/seo";
 //import ReactHtmlParser from 'react-html-parser'; //parse html
 import Image from "../components/utils/imageRelativePath"; //search for existing images and display it based onf ile name
 import Link from "../components/utils/link"; //custom links
+import BGImage from "./images/avantecture-0Vdrg5pR7NY-unsplash.png";
 
 
 
@@ -27,6 +28,9 @@ const ImagePosition = styled.div`
   top:0;
   left:0;
   z-index: -2;
+  @media(max-width: 576px) {
+    display: none;
+  }
 `;
 
 const Opacity = styled.div`
@@ -37,6 +41,9 @@ const Opacity = styled.div`
   left:0;
   z-index: -1;
   background: rgba(0, 0, 0, 0.4);
+  @media(max-width: 576px) {
+    display: none;
+  }
 `;
 
 const Hero = styled.div`
@@ -85,6 +92,53 @@ const Hero = styled.div`
       background-color:#ffcc23;
     }
   }
+  @media(max-width: 576px) {
+    padding:103px 30px 60px 30px;
+    &::before {
+      content: "";
+      background-image: url(${BGImage});
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.45;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+      position: relative;
+    }
+    .supTitle {
+      font-size: 0.75rem;
+      padding-top: 10px;
+      position: relative;
+    }
+    .subTitle {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      padding: 15px 0;
+      position: relative;
+    }
+    .licensed {
+      position: relative;
+      font-size: 0.75rem;
+    }
+    .licensed-number {
+      position: relative;
+      font-size: 0.75rem;
+    }
+    .estimateButton {
+      position: relative;
+    }
+    .button {
+      font-size: 0.5rem;
+      padding: 9px 18px;
+      margin-top: 18px;
+    }
+  }
 `;
 
 const ConentContainer = styled.div`
@@ -109,6 +163,25 @@ const ConentContainer = styled.div`
       padding: 30px 0;
     }
   }
+  @media(max-width: 576px) {
+    .serviceArea {
+      padding: 30px;
+      span {
+        font-size: 0.5rem;
+        padding: 0 8px;
+      }
+    }
+
+    .carouselContainer {
+      h1 {
+        font-size 1.25rem;
+      }
+  
+      .carouselElement {
+        padding: 15px 0;
+      }
+    }
+  }
 `;
 
 const PageTemplate = ({ data }) => {
@@ -122,7 +195,7 @@ const PageTemplate = ({ data }) => {
       <Hero>
         <div className="container">
           <div className="supTitle">General Contractor & Project Managment</div>
-          <h1>
+          <h1 className="companyTitle">
             Scoppettone <br />
             Building
           </h1>
@@ -131,8 +204,8 @@ const PageTemplate = ({ data }) => {
             13 years in the making.
           </p>
           <p className="licensed">Licensed and fully insured.</p>
-          <p>License Number: 894348</p>
-          <Link className="button btn" to={`/contact/`}>GET A FREE ESTIMATE</Link>
+          <p className="licensed-number">License Number: 894348</p>
+          <Link className="button btn estimateButton" to={`/contact/`}>GET A FREE ESTIMATE</Link>
         </div>
         <Opacity />
         <ImagePosition>
