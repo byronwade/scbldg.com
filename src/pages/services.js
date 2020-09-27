@@ -33,6 +33,26 @@ const SizedServiceImg = styled.div`
   }
 `
 
+const ButtonRow = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+ .button {
+    padding:15px 30px;
+    font-size: 20px;
+    background-color:#F9E192;
+    color: #333;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+    text-decoration: none;
+    &:hover {
+      background-color:#ffcc23;
+    }
+ }
+`
+
 const PageTemplate = ({ data }) => {
   console.log(data)
   const { site, pages } = data.websiteData //site data and page specific data
@@ -152,12 +172,10 @@ const PageTemplate = ({ data }) => {
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
-
-    <div className="col-md-4 col-sm-6 pb-5">
-      <Link className="btn primary text-white" to={`/contact/`}>GET A FREE ESTIMATE</Link>
-    </div>
-
   </div>
+  <ButtonRow>
+      <Link className="button btn" to={`/contact/`}>GET A FREE ESTIMATE</Link>
+    </ButtonRow>
     </Container>
     </Layout>
   )
