@@ -10,7 +10,7 @@ import Link from "./utils/link" //custom links
 const FooterSection = styled.footer`
   background:#232323;
   .footer {
-    padding: 40px;
+    padding: 40px 0;
   }
   .image-wrapper{
     max-width: 30%;  
@@ -58,6 +58,18 @@ const FooterSection = styled.footer`
     color: #f4f4f4;
     font-size: 0.75rem;
   }
+  @media(max-width: 768px) {
+    .logo {
+      margin: 10px 0;
+    }
+    .menuItems {
+      margin: 10px 0;
+    }
+    
+    .contactUs {
+      margin: 10px 0;
+    }
+  }
 `;
 
 const Footer = () => {
@@ -68,7 +80,7 @@ const Footer = () => {
       <div className="container">
         <div className="row footer">
 
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-white">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 text-white logo">
             <div className="image-wrapper">
               <Image filename="scoppettone-building.png" alt={`backgroung image`} />
             </div>
@@ -77,17 +89,21 @@ const Footer = () => {
           </div>
 
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-white">
-                <p className="group-title">Explore</p>
-                <Link to={`/`} className="menuLink">Home</Link>
-                <Link to={`/services/`} className="menuLink">Services</Link>
-                <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
-                <Link to={`/contact/`} className="menuLink">Contact</Link>
+                <div className="menuItems">
+                  <p className="group-title">Explore</p>
+                  <Link to={`/`} className="menuLink">Home</Link>
+                  <Link to={`/services/`} className="menuLink">Services</Link>
+                  <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
+                  <Link to={`/contact/`} className="menuLink">Contact</Link>
+                </div>
           </div>
 
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-white">
-                <p className="group-title">Projects</p>
-                <Link to={`/portfolio/Spa-Bathroom`} className="menuLink">Spa-Bathroom</Link>
-                <Link to={`/portfolio/Bathroom-Remodeling-Los-Gatos`} className="menuLink">Bathroom Remodeling</Link>
+                <div className="menuItems">
+                  <p className="group-title">Projects</p>
+                  <Link to={`/portfolio/Spa-Bathroom`} className="menuLink">Spa-Bathroom</Link>
+                  <Link to={`/portfolio/Bathroom-Remodeling-Los-Gatos`} className="menuLink">Bathroom Remodeling</Link>
+                </div>
           </div>
 
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-3 text-white contactUs">

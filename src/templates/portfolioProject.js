@@ -37,6 +37,15 @@ const ProjectContainer = styled.div`
             cursor: pointer;
         }
     }
+    @media(max-width: 567px) {
+        .title {
+            font-size: 1.75rem;
+            padding: 0 15px 0 0;
+        }
+        .date {
+            font-size: 1rem;
+        }
+    }
 `
 
 const PortfolioProject = ({ title, date, featuredImage, imageShowcase }) => {
@@ -55,7 +64,7 @@ const PortfolioProject = ({ title, date, featuredImage, imageShowcase }) => {
             <div className="row">
                 {
                     images.map((currentImage, index) => 
-                        <div key={index} className="col-md-4 my-3 ">
+                        <div key={index} className="col-sm-6 col-md-4 my-3 ">
                             <div className="ImageWrapper">
                                 <img src={currentImage} alt={'showcase-image'} className="project-showcase-img" onClick={() => setCurrentImageIndex(index)}/>
                             </div>

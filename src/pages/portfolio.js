@@ -12,6 +12,14 @@ import Link from "../components/utils/link" //custom links
 //import Link from "../components/utils/link" //custom links
 import Container from 'react-bootstrap/Container';
 
+const PageHeader = styled.h1`
+  font-size: 3rem;
+  color: white;
+  @media(max-width: 567px) {
+    font-size: 1.75rem;
+  }
+`
+
 
 const Zoom = styled.div`
 .view {
@@ -76,6 +84,12 @@ const Zoom = styled.div`
     opacity: 1 !important;
     background: rgba(0,0,0,.5);
 }
+
+@media(max-width: 567px) {
+  .imageTitle {
+    font-size: 1.5rem;
+  }
+}
 `;
 
 const PageTemplate = ({ data }) => {
@@ -90,10 +104,10 @@ const PageTemplate = ({ data }) => {
       <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={portfolio} />
       <Container>
         <div className="pt-5 pb-5">
-          <h1 className="text-white">See our projects <br />
+          <PageHeader>See our projects <br />
           We strive to provide <br />
           the highest quality <br />
-          materials</h1>
+          materials</PageHeader>
         </div>
         <div className="row mb-5">
           <div className="col-md-12 mb-5">

@@ -19,6 +19,34 @@ import Nav from 'react-bootstrap/Nav';
 
 import Image from "../components/utils/imageRelativePath"; //search for existing images and display it based onf ile name
 
+const HeaderContent = styled.div`
+  @media(max-width: 567px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+`
+
+const GridWrapper = styled.div`
+  .service-tile {
+    text-align: center;
+  }
+  @media(max-width: 567px) {
+    .service-tile {
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.75rem;
+        padding: 0 15px;
+      }
+    }
+  }
+`
 
 const SizedServiceImg = styled.div`
   max-width: 100px;
@@ -26,10 +54,14 @@ const SizedServiceImg = styled.div`
   width: auto;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   overflow: hidden;
   img {
     filter: invert(100%);
+  }
+  @media(max-width: 567px) {
+    max-width: 75px;
+    max-height: 75px;
   }
 `
 
@@ -51,6 +83,12 @@ const ButtonRow = styled.div`
       background-color:#ffcc23;
     }
  }
+ @media(max-width: 567px) {
+   .button {
+     padding: 10px 20px;
+     font-size: 15px;
+   }
+ }
 `
 
 const PageTemplate = ({ data }) => {
@@ -66,27 +104,30 @@ const PageTemplate = ({ data }) => {
           <div className="row pt-5 pb-5 text-center">
 
   <div className="col-md-12 col-sm-12">
-      <h1 className="text-white">What we do</h1>
-      <p>We help Brands and Businesses build communication across Web, Print and Digital Medium.</p>
+      <HeaderContent>
+        <h1 className="text-white">What we do</h1>
+        <p>We help Brands and Businesses build communication across Web, Print and Digital Medium.</p>
+      </HeaderContent>
   </div>
 
   </div>
 
-  <div className="row">
+  <GridWrapper>
+      <div className="row">
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-desktop"></i>
             <SizedServiceImg>
               <Image filename="pipeline.png" alt={`backgroung image`}  />
             </SizedServiceImg>
             <h3 className="text-white">Plumbing</h3>
-            <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
+            <p className="">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-code"></i>
             <SizedServiceImg>
               <Image filename="drywall.png" alt={`backgroung image`}  />
@@ -97,7 +138,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-html5"></i>
             <SizedServiceImg>
               <Image filename="decksicon.png" alt={`backgroung image`}  />
@@ -108,7 +149,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-pencil"></i>
             <SizedServiceImg>
               <Image filename="electricWire.png" alt={`backgroung image`}  />
@@ -119,7 +160,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-flag-o"></i>
             <SizedServiceImg>
               <Image filename="foundation.png" alt={`backgroung image`}  />
@@ -130,7 +171,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-globe"></i>
             <SizedServiceImg>
               <Image filename="window.png" alt={`backgroung image`}  />
@@ -141,7 +182,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-pencil"></i>
             <SizedServiceImg>
               <Image filename="plan.png" alt={`backgroung image`}  />
@@ -152,7 +193,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-flag-o"></i>
             <SizedServiceImg>
               <Image filename="fence.png" alt={`backgroung image`}  />
@@ -163,7 +204,7 @@ const PageTemplate = ({ data }) => {
     </div>
 
     <div className="col-md-4 col-sm-6 pb-5">
-        <div className="text-center">
+        <div className="service-tile">
             <i className="fa fa-globe"></i>
             <SizedServiceImg>
               <Image filename="remodel.png" alt={`backgroung image`}  />
@@ -172,7 +213,9 @@ const PageTemplate = ({ data }) => {
             <p className="small">Multipurpose HTML Template for Creative, Agencies and Corporate. Its very easy to use &amp; Customize and the best option for your next project.</p>
         </div>
     </div>
-  </div>
+    </div>
+  </GridWrapper>
+ 
   <ButtonRow>
       <Link className="button btn" to={`/contact/`}>GET A FREE ESTIMATE</Link>
     </ButtonRow>
