@@ -22,6 +22,10 @@ const ProjectContainer = styled.div`
         font-size: 1.25rem;
         font-weight: 100;
     }
+    .featuredImage {
+        border-radius: 10px;
+        overflow: hidden;
+    }
     .ImageWrapper {
         width: 100%;
         height: 400px;
@@ -59,7 +63,10 @@ const PortfolioProject = ({ title, date, featuredImage, imageShowcase }) => {
             <div className="my-3">
             <h1 className="text-white mt-3 mb-0 title">{title}</h1>
             <h2 className="text-white mb-3 date">{date}</h2>
-            <div className="my-3"><Image filename={featuredImage} alt={'backgroung image'} /></div>
+            <div className="my-3">
+                <div className="featuredImage">
+                    <Image filename={featuredImage} alt={'backgroung image'} /></div>
+                </div>
             </div>
             <div className="row">
                 {
