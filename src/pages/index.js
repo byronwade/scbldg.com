@@ -12,7 +12,6 @@ import Link from "../components/utils/link"; //custom links
 import BGImage from "./images/avantecture-0Vdrg5pR7NY-unsplash.png";
 
 
-
 const contentStyle = {
   height: '400px',
   color: '#fff',
@@ -134,8 +133,8 @@ const Hero = styled.div`
       position: relative;
     }
     .button {
-      font-size: 0.5rem;
-      padding: 9px 18px;
+      font-size: 0.75rem;
+      padding: 10px 20px;
       margin-top: 18px;
     }
   }
@@ -167,7 +166,7 @@ const ConentContainer = styled.div`
     .serviceArea {
       padding: 30px;
       span {
-        font-size: 0.5rem;
+        font-size: 1rem;
         padding: 0 8px;
       }
     }

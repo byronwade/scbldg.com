@@ -1,0 +1,22 @@
+@import "./poly-fluid-sizing.scss";
+
+.contactInfoWrapper {
+    h1 {
+        $map: (567px: 22px, 768px: 24px, 992px: 34px);
+        @include poly-fluid-sizing('font-size', $map);
+      }
+      
+      span, p, button {
+          $map: (576px: 14px, 768px: 16px, 992px: 25px);
+          @include poly-fluid-sizing('font-size', $map);
+      }
+}
+
+.formWrapper {
+  .formCard {
+    $map: (576px: 30px, 950px: 50px);
+    @include poly-fluid-sizing('padding', $map);
+  }  
+}
+
+

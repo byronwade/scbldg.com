@@ -11,6 +11,8 @@ import SEO from "../components/seo"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import "./styles/contact.scss";
+
 
 const Contact = styled.div`
 
@@ -24,7 +26,7 @@ const Contact = styled.div`
   .formWrapper {
     padding:30px 0;
     .formCard {
-      padding:50px;
+      //padding:50px;
       background: #292829;
       border-radius: 5px;
     }
