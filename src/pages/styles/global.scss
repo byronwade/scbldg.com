@@ -1,0 +1,12 @@
+// import sizing function
+@import "./poly-fluid-sizing.scss";
+
+// media breakpoints for application
+$mobile: 567px;
+$tablet: 768px;
+$desktop: 992px;
+$monitor: 1200px;
+
+@mixin fluidSize($property, $map) {
+    @include poly-fluid-sizing($property, $map);
+}

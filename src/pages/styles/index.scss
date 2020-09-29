@@ -1,0 +1,87 @@
+@import "./global.scss";
+
+.image-backdrop::after {
+    background-image: url("../images/avantecture-0Vdrg5pR7NY-unsplash.png");
+  
+    background-size: cover;
+    background-position: 60% 5%;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.image-backdrop {
+    position: relative;
+    overflow: visible;
+    background: rgba(0, 0, 0, 0.4);
+   
+}
+
+.hero {
+
+    padding:103px 30px 73px 30px;
+
+    position: relative;
+
+    margin-top: -73px;
+    $base-font-size: 18px;
+    @include fluidSize('font-size', ($mobile: $base-font-size, $desktop: 40px));
+    .supTitle {
+        padding-top: 20px;
+        @include fluidSize('font-size', ($mobile: 13px, $desktop: 18px));
+        //font-size: 0.7em;
+    }
+
+    .companyTitle {
+        color: #F9E192;
+        @include fluidSize('font-size', ($mobile: 31px, $desktop: 90px));
+        @include fluidSize('line-height', ($mobile: 45px, $desktop: 110px));
+        text-transform: uppercase;
+        padding-top:0;
+        margin-top:10px;
+        margin-bottom:0;
+    }
+
+    .subTitle {
+        padding: 0;
+        @include fluidSize('font-size', ($mobile: 18px, $desktop: 30px));
+        @include fluidSize('line-height', ($mobile: 22px, $desktop: 40px));
+        @include fluidSize('padding-top', ($mobile: 15px, $desktop: 20px));
+        @include fluidSize('padding-bottom', ($mobile: 15px, $desktop: 20px));
+    }
+
+    .licensed, .licensed-number {
+        @include fluidSize('font-size', ($mobile: 13px, $desktop: 20px));
+        margin-bottom: 0;
+    }
+
+    .licensed {
+        color: #F9E192;
+    }
+
+    .button {
+        @include fluidSize('padding-top', ($mobile: 10px, $desktop: 15px));
+        @include fluidSize('padding-bottom', ($mobile: 10px, $desktop: 15px));
+        @include fluidSize('padding-left', ($mobile: 20px, $desktop: 30px));
+        @include fluidSize('padding-right', ($mobile: 20px, $desktop: 30px));
+        @include fluidSize('font-size', ($mobile: 13px, $desktop: 20px));
+        background-color:#F9E192;
+        color: #333;
+        border:none;
+        border-radius: 5px;
+        margin-top: 30px;
+        font-weight: bold;
+        display: block;
+        width: fit-content;
+        text-decoration: none;
+        &:hover {
+          background-color:#ffcc23;
+        }
+    }
+
+}
