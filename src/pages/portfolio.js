@@ -100,7 +100,7 @@ const PageTemplate = ({ data }) => {
   const { portfolio } = pages
 
   const siteTitleUnique = 'Portfolio Page' // Portfolio Page | Scoppettone Builders
-  const siteDescriptionUnique = 'Porfolio of Scoppettone Building'
+  const siteDescriptionUnique = 'Porfolio of Scoppettone Building. General Contractor & Project Management. Santa Cruz County.'
 
   return (
     <Layout>

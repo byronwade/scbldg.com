@@ -95,7 +95,7 @@ const PageTemplate = ({ data }) => {
   const { home } = pages
 
   const siteTitleUnique = 'Home Page' // Home Page | Scoppettone Builders
-  const siteDescriptionUnique = 'Scoppettone Building. General Contractor & Project Management. Your trusted local general contractor. 13 years in the making.'
+  const siteDescriptionUnique = 'Scoppettone Building. General Contractor & Project Management. Your trusted local general contractor. 13 years in the making. Santa Cruz County.'
 
   return (
     <Layout>

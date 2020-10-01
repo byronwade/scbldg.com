@@ -51,7 +51,7 @@ const PageTemplate = ({ data }) => {
   const { contact } = pages
 
   const siteTitleUnique = 'Contact Page' // Contact Page | Scoppettone Builders
-  const siteDescriptionUnique = 'Contact Scoppettone Building. Call us at (831)430-6011. Open M-F 8:00am - 5:00pm. Closed Saturday and Sunday.'
+  const siteDescriptionUnique = 'Contact Scoppettone Building. Call us at (831)430-6011. Open M-F 8:00am - 5:00pm. Closed Saturday and Sunday. General Contractor & Project Management. Santa Cruz County.'
 
   return (
     <Layout>

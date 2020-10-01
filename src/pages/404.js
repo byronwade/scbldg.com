@@ -10,7 +10,7 @@ const NotFoundPage = ({ data, location }) => {
   const { siteURL, siteTitle, siteDescription } = site
 
   const siteTitleUnique = "404: Not Found"
-  const siteDesciptionUnique = "Not Found Page Scoppettone Building"
+  const siteDesciptionUnique = "Not Found Page Scoppettone Building. General Contractor & Project Management. Santa Cruz County."
 
   return (
     <Layout>

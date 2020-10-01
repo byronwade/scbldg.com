@@ -98,7 +98,7 @@ const PageTemplate = ({ data }) => {
   const { services } = pages
 
   const siteTitleUnique = 'Services Page' // Services Page | Scoppettone Builders
-  const siteDescriptionUnique = 'Services that Scoppettone Building offers.'
+  const siteDescriptionUnique = 'Services that Scoppettone Building offers: Plumbing, Drywall/Rot Damage, Decks, Electrical, Foundation Work, Window and Door Replacement, Plans and Permits, Fences and Retaining Walls, Remodels and Additions. General Contractor & Project Management. Santa Cruz County. '
 
   return (
     <Layout>
