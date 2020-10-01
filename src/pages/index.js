@@ -94,9 +94,12 @@ const PageTemplate = ({ data }) => {
   const { siteURL, siteTitle, siteDescription } = site
   const { home } = pages
 
+  const siteTitleUnique = 'Home Page' // Home Page | Scoppettone Builders
+  const siteDescriptionUnique = 'Scoppettone Building. General Contractor & Project Management. Your trusted local general contractor. 13 years in the making.'
+
   return (
     <Layout>
-      <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={home} />
+      <SEO title={siteTitleUnique} description={siteDescriptionUnique} url={siteURL} pageData={home} />
       <div className="image-backdrop">
             <div className="container">
                   <div className="hero">

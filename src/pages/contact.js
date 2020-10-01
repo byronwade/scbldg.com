@@ -50,9 +50,12 @@ const PageTemplate = ({ data }) => {
   const { siteURL, siteTitle, siteDescription } = site
   const { contact } = pages
 
+  const siteTitleUnique = 'Contact Page' // Contact Page | Scoppettone Builders
+  const siteDescriptionUnique = 'Contact Scoppettone Building. Call us at (831)430-6011. Open M-F 8:00am - 5:00pm. Closed Saturday and Sunday.'
+
   return (
     <Layout>
-      <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={contact} />
+      <SEO title={siteTitleUnique} description={siteDescriptionUnique} url={siteURL} pageData={contact} />
       <div className="container">
         <Contact>
           <div className="row">

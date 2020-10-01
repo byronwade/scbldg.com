@@ -4,7 +4,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   // Data can come from anywhere, but for now create it manually
   const pageData = {
     site: {
-      siteTitle: `Scopetonee Builders`,
+      siteTitle: `Scoppettone Builders`,
       siteURL: `http://www.scbldg.com/`,
       sitePhoneNumber: `8314306011`,
       siteAuthor: {

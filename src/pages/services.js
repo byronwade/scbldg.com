@@ -97,9 +97,12 @@ const PageTemplate = ({ data }) => {
   const { siteURL, siteTitle, siteDescription } = site
   const { services } = pages
 
+  const siteTitleUnique = 'Services Page' // Services Page | Scoppettone Builders
+  const siteDescriptionUnique = 'Services that Scoppettone Building offers.'
+
   return (
     <Layout>
-      <SEO title={siteTitle} description={siteDescription} url={siteURL} pageData={services} />
+      <SEO title={siteTitleUnique} description={siteDescriptionUnique} url={siteURL} pageData={services} />
       <Container>
           <div className="row pt-5 pb-5 text-center">
 
