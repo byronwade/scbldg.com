@@ -105,12 +105,11 @@ const PageTemplate = ({ data }) => {
                   <div className="hero">
                     <div className="supTitle">General Contractor & Project Managment</div>
                     <h1 className="companyTitle">
-                      Scoppettone <br />
-                      Building
+                      Scoppettone Inc.
                     </h1>
                     <p className="subTitle">
                       Your trusted local general contractor.<br />
-                      13 years in the making.
+                      Working since 1989.
                     </p>
                     <p className="licensed">Licensed and fully insured.</p>
                     <p className="licensed-number">License Number: 894348</p>

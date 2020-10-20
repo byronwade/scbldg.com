@@ -29,7 +29,8 @@ const FooterSection = styled.footer`
   .group-title {
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    color: #fff;
   }
 
   .menuLink {
@@ -90,7 +91,7 @@ const Footer = () => {
 
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-white">
                 <div className="menuItems">
-                  <p className="group-title">Explore</p>
+                  <h1 className="group-title">Explore</h1>
                   <Link to={`/`} className="menuLink">Home</Link>
                   <Link to={`/services/`} className="menuLink">Services</Link>
                   <Link to={`/portfolio/`} className="menuLink">Portfolio</Link>
@@ -100,7 +101,7 @@ const Footer = () => {
 
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-white">
                 <div className="menuItems">
-                  <p className="group-title">Projects</p>
+                  <h1 className="group-title">Projects</h1>
                   <Link to={`/portfolio/Spa-Bathroom`} className="menuLink">Spa-Bathroom</Link>
                   <Link to={`/portfolio/Bathroom-Remodeling-Los-Gatos`} className="menuLink">Bathroom Remodeling</Link>
                 </div>

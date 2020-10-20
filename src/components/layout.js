@@ -47,7 +47,7 @@ const typography = new Typography({
       ],
     },
   ],
-  headerFontFamily: ['Lato', 'sans-serif'],
+  headerFontFamily: ['auto'],
   headerGrayHue: 'slate',
   //'Lato', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'
   bodyFontFamily: ['Roboto', 'serif'],

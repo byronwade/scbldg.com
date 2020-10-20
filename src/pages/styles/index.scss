@@ -1,12 +1,12 @@
 @import "./global.scss";
 
 .image-backdrop::after {
-    background-image: url("../images/avantecture-0Vdrg5pR7NY-unsplash.png");
+    background-image: url("../images/image0.jpg");
   
     background-size: cover;
-    background-position: 60% 5%;
+    background-position: 40% 70%;
     background-repeat: no-repeat;
-    content: "";
+    content: ""; 
     position: absolute;
     top: 0;
     right: 0;
@@ -24,7 +24,7 @@
 
 .hero {
 
-    padding:103px 30px 73px 30px;
+    padding:103px 0px 73px 0px;
 
     position: relative;
 
